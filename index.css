@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+.header, .sidebar, .projects, .announcements, .trending{
+    border: 1px solid black;
+}
+
+.header{
+    height: 10vh; /*to be modified*/
+    grid-column: 2/4;
+
+}
+
+.sidebar{
+    width: 20vw;  /* to be modified */
+    grid-row: 1/4;
+    
+}
+
+.projects{
+    width: 50vw; /* to be modified */
+    grid-row: 2/4;
+}
+
+.announcements{
+    width: 50vw; /* to be modified */
+    height: 10vh; /* to be modified */   
+}
+
+.trending{
+    width: 50vw;
+    height: 10vh; /* to be modified */
+}
