@@ -149,7 +149,7 @@ ul{
 
 
 .projects-container{
-    width: 58vw; 
+    width: 55vw; 
     min-height: 100vh;
     grid-row: 2/4;
     margin: 2%;
@@ -177,10 +177,11 @@ ul{
     position: relative;
 }
 
-.card-content{
+.card-content, .announcement-description, .user-description p{
     font-size: 0.8rem;
     color: #a3a3a3;
 }
+
 .card-icons ul{
     display: grid;
     grid-template-columns: max-content max-content max-content;
@@ -196,25 +197,32 @@ ul{
 .announcements-container{
     width: 25vw; 
     height: max-content;
-    overflow-wrap: normal; 
+    overflow-wrap: normal;
+    margin: 2%; 
+    margin-top: 5%;
 }
 
 .announcements{
+    width: 23vw;
+    height: 40vh;
+    word-wrap: break-word;
+    display: grid;
+    gap: 1%;
     background-color: white;
-    padding: 3%;
+    padding: 5%;
+    margin: 4%;
+    border-radius: 10px;
 }
 
+.announcement-title{
+    margin-bottom:1%;
+}
 
+hr{
+    width: 20vw;
+    margin: auto;
+}
 
-.trending{
-    width: 25vw;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 3%;
-} 
 
 .icon{
     width: 2vw;
@@ -226,15 +234,33 @@ ul{
     height: 50px;
 }
 
-/* .pfp-small{
-    clip-path: circle();
-    height:50px;
-} */
+.trending-container{
+    width: 25vw;
+    margin-top: 0px;;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 3%;
+} 
 
 .trending-user-details{
     display: grid;
     grid-template-columns: max-content max-content;
     align-items: center;
-    gap: 2%;
+    gap: 8%;
     margin: 5%;
+}
+
+.trending-container ul{
+    margin: 4%;
+    width: 23vw;
+    background-color: white;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.user-description h4{
+    margin-bottom: 2%;
 }
