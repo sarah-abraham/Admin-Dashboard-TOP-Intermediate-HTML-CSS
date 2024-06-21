@@ -4,39 +4,144 @@
     box-sizing: border-box;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: max-content max-content;
 }
 
-
-.header, .sidebar, .projects, .announcements, .trending{
-    border: 1px solid black;
-}
 
 .header{
-    height: 10vh; /*to be modified*/
     grid-column: 2/4;
-
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: max-content
 }
+
+.search-notification-header, .user-info-header{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: start;
+    align-items: center;
+    gap: 50%; 
+}
+
+
+
+.search{
+    display:grid;
+    grid-template-columns: max-content max-content;
+    justify-content: start;
+    align-items: center;
+    margin: 5%;
+}
+
+/* .search-icon{
+    justify-content: end;
+} */
+
+.notification-user-container{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: end;
+    align-items: center;
+    gap: 10%
+}
+
+.user-details{
+    display: grid;
+    grid-template-columns: 3vw max-content;
+    justify-content: start;
+    align-items:center;
+    gap: 8%;
+    margin: 2%;
+}
+
 
 .sidebar{
-    width: 20vw;  /* to be modified */
+    display: flex;
+    flex-direction: column;
+    width: max-content; 
+    min-height: 100vh;
     grid-row: 1/4;
-    
+    background-color: burlywood;
 }
 
+.sidebar-title{
+    display: flex;
+}
+
+
 .projects{
-    width: 50vw; /* to be modified */
+    width: max-content; 
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     grid-row: 2/4;
 }
 
-.announcements{
-    width: 50vw; /* to be modified */
-    height: 10vh; /* to be modified */   
+.project-description{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 2%;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+    width: 30vw;
+    height: max-content;
+    background-color: beige;
+    overflow-wrap: normal;
+    font-size: 1rem;
+    padding: 3%;
+}
+
+.card-icons ul{
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+}
+
+
+
+.announcements-container{
+    width: 25vw; 
+    height: max-content;
+    overflow-wrap: normal; 
 }
 
 .trending{
-    width: 50vw;
-    height: 10vh; /* to be modified */
+    width: 25vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 3%;
+} 
+
+.icon{
+    width: 2vw;
+}
+
+.pfp{
+    clip-path: circle();
+    width: 50px;
+    height: 50px;
+}
+
+/* .pfp-small{
+    clip-path: circle();
+    height:50px;
+} */
+
+.trending-user-details{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    gap: 2%;
+    margin: 5%;
 }
